@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Product Quick View | CodyHouse</title>
+</head>
+<script type="text/javascript">
+function pop_up_function(product_number) {
+	document.getElementById('model_pop_up').style.display="block";
+	
+	product_name=product_number+"_name";
+	product_name=document.getElementById(product_name).innerHTML;
+	document.getElementById('product_name_in_pop_up').innerHTML=product_name;
+
+	product_image=product_number+"_image";
+	// product_image_container=document.getElementById('image_container');
+	// product_image_container.classList.add("selected");
+	product_image=document.getElementById(product_image).src;
+	product_image=document.getElementById('product_image_in_pop_up').src=product_image;
+	document.getElementById('product_image_in_pop_up').style.width = "300px";
+	// document.getElementById('product_image_in_pop_up').style.position="relative";
+	// document.getElementById('product_image_in_pop_up').style.z-index="3";
+}
+</script>
+<body>
+	<header>
+		<h1>Product Quick View</h1>
+	</header>
+	
+	<ul class="cd-items cd-container">
+		<li class="cd-item">
+			<img id="product_1_image" src="img/item-1.jpg" alt="Item Preview">
+			<p id="product_1_name">Testing</p>
+			<a href="#0" class="cd-trigger" onclick="pop_up_function('product_1');">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+
+		<li class="cd-item">
+			<img src="img/item-1.jpg" alt="Item Preview">
+			<a href="#0" class="cd-trigger">Quick View</a>
+		</li> <!-- cd-item -->
+	</ul> <!-- cd-items -->
+
+	<div class="cd-quick-view" id="model_pop_up" style="display: none;width: 400px !important;">
+		<div class="cd-slider-wrapper">
+			<ul class="cd-slider">
+				<li class="selected" id="image_container">
+					<img src="img/item-2.jpg" alt="Product 1"
+					id="product_image_in_pop_up">
+				</li>
+				<!-- <li><img src="img/item-2.jpg" alt="Product 2"></li> -->
+				<!-- <li><img src="img/item-3.jpg" alt="Product 3"></li> -->
+			</ul> <!-- cd-slider -->
+
+			<ul class="cd-slider-navigation">
+				<li><a class="cd-next" href="#0">Prev</a></li>
+				<li><a class="cd-prev" href="#0">Next</a></li>
+			</ul> <!-- cd-slider-navigation -->
+		</div> <!-- cd-slider-wrapper -->
+
+		<div class="cd-item-info">
+			<h2 id="product_name_in_pop_up">Produt Title</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, omnis illo iste ratione. Numquam eveniet quo, ullam itaque expedita impedit. Eveniet, asperiores amet iste repellendus similique reiciendis, maxime laborum praesentium.</p>
+
+			<ul class="cd-item-action">
+				<li><button class="add-to-cart">Add to cart</button></li>					
+				<li><a href="#0">Learn more</a></li>	
+			</ul> <!-- cd-item-action -->
+		</div> <!-- cd-item-info -->
+		<a href="#0" class="cd-close">Close</a>
+	</div> <!-- cd-quick-view -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

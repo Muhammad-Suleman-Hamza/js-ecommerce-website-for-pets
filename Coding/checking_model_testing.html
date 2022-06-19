@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+</style>
+<script type="text/javascript">
+ function imageZoom(imgID, resultID) {
+  document.getElementById(resultID).style.display="block";
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 1);
+    y = pos.y - (lens.offsetHeight / 1);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+function checking(id){
+
+    document.getElementById(id).style.display="none";
+     var elements = document.getElementsByClassName("img-zoom-lens");
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = "none";
+    }
+}
+  
+$(document).ready(function(){
+  $("#quick_view").click(function(value){
+     // var myHeading = "<p>I Am Added Dynamically </p>";
+     // $("#para").html(myHeading);
+     var product_number=$(this).data("value");
+     image_id="#"+product_number+"_image";
+     var product_image_path=$(image_id).attr('src');
+     // $("#pop_up_image").attr("src", product_image_path);
+     $("#pop_up_image").attr("src", "images/Dog.jpg");   
+     // $('#modal').modal('show');
+  });
+});
+function product_size_function(product_number,product_size)
+{   
+       var current_product="product_"+product_number+"_size_"+product_size;
+       var current_product_XS="product_"+product_number+"_size_XS";
+       var current_product_S="product_"+product_number+"_size_S";
+       var current_product_M="product_"+product_number+"_size_M";
+       var current_product_L="product_"+product_number+"_size_L";
+       var current_product_XL="product_"+product_number+"_size_XL";
+       // alert(product_size);
+    if(product_size=="XS"){
+         if(document.getElementById(current_product).style.color=="rgb(170, 31, 46)"){  
+           document.getElementById(current_product).style.color="black";    
+           document.getElementById(current_product).style.border="none";
+        }
+        else{
+            document.getElementById(current_product).style.color="#aa1f2e";        
+            document.getElementById(current_product).style.border="thin solid #aa1f2e";        
+            document.getElementById(current_product_S).style.color="black";        
+            document.getElementById(current_product_M).style.color="black";        
+            document.getElementById(current_product_L).style.color="black";        
+            document.getElementById(current_product_XL).style.color="black";
+            document.getElementById(current_product_S).style.border="none";
+            document.getElementById(current_product_M).style.border="none";
+            document.getElementById(current_product_L).style.border="none";
+            document.getElementById(current_product_XL).style.border="none";
+        }
+    }
+    else if(product_size=="S"){
+         if(document.getElementById(current_product).style.color=="rgb(170, 31, 46)"){  
+           document.getElementById(current_product).style.color="black";    
+           document.getElementById(current_product).style.border="none";
+        }
+        else{
+            document.getElementById(current_product).style.color="#aa1f2e";        
+            document.getElementById(current_product).style.border="thin solid #aa1f2e";        
+            document.getElementById(current_product_XS).style.color="black";        
+            document.getElementById(current_product_M).style.color="black";        
+            document.getElementById(current_product_L).style.color="black";        
+            document.getElementById(current_product_XL).style.color="black";
+            document.getElementById(current_product_XS).style.border="none";
+            document.getElementById(current_product_M).style.border="none";
+            document.getElementById(current_product_L).style.border="none";
+            document.getElementById(current_product_XL).style.border="none";
+        }
+    }
+    else if(product_size=="M"){
+         if(document.getElementById(current_product).style.color=="rgb(170, 31, 46)"){  
+           document.getElementById(current_product).style.color="black";    
+           document.getElementById(current_product).style.border="none";
+        }
+        else{
+            document.getElementById(current_product).style.color="#aa1f2e";        
+            document.getElementById(current_product).style.border="thin solid #aa1f2e";        
+            document.getElementById(current_product_S).style.color="black";        
+            document.getElementById(current_product_XS).style.color="black";        
+            document.getElementById(current_product_L).style.color="black";        
+            document.getElementById(current_product_XL).style.color="black";
+            document.getElementById(current_product_S).style.border="none";
+            document.getElementById(current_product_XS).style.border="none";
+            document.getElementById(current_product_L).style.border="none";
+            document.getElementById(current_product_XL).style.border="none";
+        }
+    }
+    else if(product_size=="L"){
+         if(document.getElementById(current_product).style.color=="rgb(170, 31, 46)"){  
+           document.getElementById(current_product).style.color="black";    
+           document.getElementById(current_product).style.border="none";
+        }
+        else{
+            document.getElementById(current_product).style.color="#aa1f2e";        
+            document.getElementById(current_product).style.border="thin solid #aa1f2e";        
+            document.getElementById(current_product_S).style.color="black";        
+            document.getElementById(current_product_M).style.color="black";        
+            document.getElementById(current_product_XS).style.color="black";        
+            document.getElementById(current_product_XL).style.color="black";
+            document.getElementById(current_product_S).style.border="none";
+            document.getElementById(current_product_M).style.border="none";
+            document.getElementById(current_product_XS).style.border="none";
+            document.getElementById(current_product_XL).style.border="none";
+        }
+    }
+    else if(product_size=="XL"){
+         if(document.getElementById(current_product).style.color=="rgb(170, 31, 46)"){  
+           document.getElementById(current_product).style.color="black";    
+           document.getElementById(current_product).style.border="none";
+        }
+        else{
+            document.getElementById(current_product).style.color="#aa1f2e";        
+            document.getElementById(current_product).style.border="thin solid #aa1f2e";        
+            document.getElementById(current_product_S).style.color="black";        
+            document.getElementById(current_product_M).style.color="black";        
+            document.getElementById(current_product_L).style.color="black";        
+            document.getElementById(current_product_XS).style.color="black";
+            document.getElementById(current_product_S).style.border="none";
+            document.getElementById(current_product_M).style.border="none";
+            document.getElementById(current_product_L).style.border="none";
+            document.getElementById(current_product_XS).style.border="none";
+        }
+    }
+}
+function product_color_function(product_number,dot_number,product_color)
+{
+    var current_product_color="product_"+product_number+"_color_"+product_color;
+    var current_product_dark_red="product_"+product_number+"_color_dark_red";
+    var current_product_dark_blue="product_"+product_number+"_color_dark_blue";
+    var current_product_yellow="product_"+product_number+"_color_yellow";
+    var current_product_orange="pr`oduct_"+product_number+"_color_orange";
+    var current_product_grey="product_"+product_number+"_color_grey";
+
+    var current_product_dot="product_"+product_number+"_dot_"+dot_number;
+    var current_product_dot_1="product_"+product_number+"_dot_1";
+    var current_product_dot_2="product_"+product_number+"_dot_2";
+    var current_product_dot_3="product_"+product_number+"_dot_3";
+    var current_product_dot_4="product_"+product_number+"_dot_4";
+    var current_product_dot_5="product_"+product_number+"_dot_5";
+    
+    if(product_color=='dark_red'){
+
+        if(document.getElementById(current_product_color).style.display=="block"){
+           document.getElementById(current_product_dot).style.display="none";    
+        }
+        else{
+            document.getElementById(current_product_dot_1).style.display="block";        
+            document.getElementById(current_product_dot_2).style.display="none";        
+            document.getElementById(current_product_dot_3).style.display="none";        
+            document.getElementById(current_product_dot_4).style.display="none";        
+            document.getElementById(current_product_dot_5).style.display="none";
+        }        
+    }
+    else if(product_color=='dark_blue'){
+        if(document.getElementById(current_product_dot).style.display=="block"){
+           document.getElementById(current_product_dot).style.display="none";    
+        }
+        else{
+            document.getElementById(current_product_dot_2).style.display="block";        
+            document.getElementById(current_product_dot_1).style.display="none";        
+            document.getElementById(current_product_dot_3).style.display="none";        
+            document.getElementById(current_product_dot_4).style.display="none";        
+            document.getElementById(current_product_dot_5).style.display="none";
+        }        
+    }
+    else if(product_color=='yellow'){
+        if(document.getElementById(current_product_dot).style.display=="block"){
+           document.getElementById(current_product_dot).style.display="none";    
+        }
+        else{
+            document.getElementById(current_product_dot_3).style.display="block";        
+            document.getElementById(current_product_dot_1).style.display="none";        
+            document.getElementById(current_product_dot_2).style.display="none";        
+            document.getElementById(current_product_dot_4).style.display="none";        
+            document.getElementById(current_product_dot_5).style.display="none";
+        }        
+    }
+    else if(product_color=='orange'){
+        if(document.getElementById(current_product_dot).style.display=="block"){
+           document.getElementById(current_product_dot).style.display="none";    
+        }
+        else{
+            document.getElementById(current_product_dot_4).style.display="block";        
+            document.getElementById(current_product_dot_1).style.display="none";        
+            document.getElementById(current_product_dot_2).style.display="none";        
+            document.getElementById(current_product_dot_3).style.display="none";        
+            document.getElementById(current_product_dot_5).style.display="none";
+        }        
+    }
+    else if(product_color=='grey'){
+        if(document.getElementById(current_product_dot).style.display=="block"){
+           document.getElementById(current_product_dot).style.display="none";    
+        }
+        else{
+            document.getElementById(current_product_dot_5).style.display="block";        
+            document.getElementById(current_product_dot_1).style.display="none";        
+            document.getElementById(current_product_dot_2).style.display="none";        
+            document.getElementById(current_product_dot_3).style.display="none";        
+            document.getElementById(current_product_dot_4).style.display="none";
+        }        
+    }
+}
+function minus_function(product_quantity)
+{
+    var pq=product_quantity+"_product_quantity";
+    var current_quantity=document.getElementById(pq).value;
+    current_quantity = +current_quantity - +1;
+    if(current_quantity<0)
+    {
+        document.getElementById(pq).value=0;
+    }
+    else{
+        document.getElementById(pq).value=current_quantity;
+    }
+
+}
+function plus_function(product_quantity){
+    var pq=product_quantity+"_product_quantity";
+    var current_quantity=document.getElementById(pq).value;
+        current_quantity = +current_quantity + +1;
+        if(current_quantity>100)
+        {
+            document.getElementById(pq).value=100;
+        }
+        else{
+            document.getElementById(pq).value=current_quantity;
+        }
+}
+function add_to_cart_function(product_quantity)
+{
+     var pq=product_quantity+"_product_quantity";
+     var product_number="product_"+product_quantity;
+     document.getElementById(product_number).style.backgroundColor="#aa1f2e";  
+     var add_to_cart_quantity=document.getElementById(pq).value;
+     setTimeout(function(){ 
+        document.getElementById(product_number).style.backgroundColor="#252a68"; }, 200);
+}
+function quanity_going_in_cart(product_number){
+
+if (product_number=="pop_up") {
+
+  var pop_up_quantity=document.getElementById("pop_up_product_quantity").value;
+  if (pop_up_quantity=="undefined") {
+    pop_up_quantity=0;
+  }
+  if (pop_up_quantity=="NaN") {
+    pop_up_quantity=0;
+  }
+  if (pop_up_quantity==0) {
+    document.getElementById("total_price_pop_up").innerHTML=document.getElementById("per_product_price").innerHTML;
+  }
+  else if(pop_up_quantity!=0) {
+    var pop_product_price=document.getElementById("per_product_price").innerHTML;
+    pop_product_price=pop_product_price.replace("$","0");
+
+    var pop_up_total_price=+pop_product_price * +pop_up_quantity;
+    pop_up_total_price = "$" + +pop_up_total_price;
+    document.getElementById("total_price_pop_up").innerHTML=pop_up_total_price;
+  }
+  // alert(pop_up_quantity);
+
+}
+else{
+  var total_quantity=0;
+var current_quantity=0;
+
+// 1_product_quantity
+  var product_quantity_id=product_number+"_product_quantity";
+  current_quantity=document.getElementById(product_quantity_id).value;
+  total_quantity=document.getElementById('hidden_quantity').innerHTML;
+  // var elements = document.getElementsByClassName('quantity_input');
+
+  if (total_quantity=="undefined") {
+    total_quantity=0;
+  }
+  if (total_quantity=="NaN") {
+    total_quantity=0;
+  }
+  if (current_quantity=="undefined") {
+    current_quantity=0;
+  }
+  if (current_quantity=="NaN") {
+    current_quantity=0;
+  }
+
+  // for(var i =0; i < elements.length; i++)
+  // { 
+   total_quantity=+total_quantity + +current_quantity;
+  // }
+  
+  document.getElementById('cart_quantity').innerHTML=total_quantity;
+  document.getElementById('hidden_quantity').innerHTML=total_quantity; 
+}
+}
+function pop_up_image_change_function(product_image_number)
+{
+  var pop_up_image_id="pop_up_image_"+ +product_image_number;
+  var pop_up_clicked_image=document.getElementById(pop_up_image_id).src;
+  // alert(pop_up_image_src);
+  var main_image_to_sub_image=document.getElementById("myimage").src;
+  document.getElementById("myimage").src=pop_up_clicked_image;
+  document.getElementById(pop_up_image_id).src=main_image_to_sub_image;
+
+} 
+</script>
+<style type="text/css">
+/* Tabs*/
+
+
+section .section-title {
+    text-align: center;
+    color: black;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#tabs{
+    color: black;
+    font-size: 12px;
+}
+
+#nav_user_image, #nav_heart_image, #nav_bag_image,#add_to_cart_bag,#bag_white{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: black;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid !important;
+    font-size: 10px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: black;
+    font-size: 10px;
+}
+.checking{
+  width: 200px;
+}
+@media (min-width: 576px){
+.modal-dialog {
+     max-width: 850px !important; 
+    margin: 1.75rem auto;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  </style>
+
+<body>
+
+<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Button to Open the Modal -->
+  <button id="quick_view" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-value="product_1">
+    Open modal
+  </button>
+<div>
+  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12"
+                    style="margin-top: 0.3%;">
+                    <div class="fluid-container" style="margin-bottom: 20px;text-align: -webkit-center;">
+                      <div class="card" style="width:260px;height: 365px;">
+                        <div class="fluid-container">
+                          <img id="product_1_image" src="images/cat.png" alt="Product Image" style="width:100%;">
+                         <div class="top-left" style="background-color: #e17725; color: white;padding-left: 5px;padding-right: 5px; padding-top: 1px;padding-bottom: 2px;border-radius: 5px;font-size: 11px;width: 81px;margin-left: -2%;">Special Offer</div>
+                          <div class="top-right" style="">
+                            <div style="">
+                                 <img src="images/heart.png" alt="Heart" style="width:26px;height: 26px; float: right;padding: 4px;background-color: #dbdbdb;border-radius: 50px;"  id="product_heart_1" onclick="product_heart_function(1);">
+                            </div>
+                             <img src="images/like_heart.png" alt="Like Heart" style="width:26px;height: 26px; float: right;padding: 4px;background-color: #dbdbdb;border-radius: 50px; display: none;"  id="product_like_heart_1" onclick="product_like_heart_function(1);">
+                          </div>
+                        </div>
+                        <div class="card-body" style="padding-top: 0px;">
+                          <div class="row" style="margin: 0px; padding: 0px;">
+                            <img src="images/star.png" width="30%" height="10%">
+                            <p class="card-title" style="padding: 0px; margin: 0px; margin-left: 12%;font-size: 12px;color: #aa1f2e;font-weight: 500;text-align: center;">Brand</p>
+                          </div>
+                          <div class="" style="padding: 0px;margin: 0px;">
+                            <p class="card-title" style="text-align: center;padding: 0px;margin: 0px;margin-top: -2%;font-size: 12px;line-height: 17px;color: #252a68;font-weight: 500;text-align: center;">Product Name</p>
+                          </div>
+                          <p class="card-text" style="font-size: 10px;text-align: center;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                           <p class="card-text" style="font-size: 10px;text-align: center;margin-top: -6%;">
+                               <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_1_size_XS" onclick="product_size_function(1,'XS');"><b>XS</b></button>
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_1_size_S"  onclick="product_size_function(1,'S');"><b>S</b></button>
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_1_size_M"  onclick="product_size_function(1,'M');"><b>M</b></button> 
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_1_size_L"  onclick="product_size_function(1,'L');"><b>L</b></button>
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_1_size_XL"  onclick="product_size_function(1,'XL');"><b>XL</b></button>
+                           </p>
+                           <p class="card-text" style="font-size: 10px;text-align: center;margin-bottom: 0px; margin: 0px; margin-top: -6%;">
+                              <button style="background-color: #d75a4a; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_1_color_dark_red"  onclick="product_color_function(1,1,'dark_red');">
+                                  <span class="dot" style="display: none;" id="product_1_dot_1"></span>
+                              </button>
+                              <button style="background-color: #252a68; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_1_color_dark_blue"  onclick="product_color_function(1,2,'dark_blue');">
+                                  <span class="dot" style="display: none;" id="product_1_dot_2"></span>
+                              </button>
+                              <button style="background-color: #d9b234; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_1_color_yellow"  onclick="product_color_function(1,3,'yellow');">
+                                  <span class="dot" style="display: none;" id="product_1_dot_3"></span>
+                              </button> 
+                              <button style="background-color: #e17725; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_1_color_orange"  onclick="product_color_function(1,4,'orange');">
+                                  <span class="dot" style="display: none;" id="product_1_dot_4"></span>
+                              </button>
+                              <button style="background-color: #d4d4d4; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_1_color_grey"  onclick="product_color_function(1,5,'grey');">
+                                  <span class="dot" style="display: none;" id="product_1_dot_5"></span>
+                              </button>
+                           </p>
+                           <p class="card-text" style="margin: 0px;">
+                            <div class="row">
+                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6">
+                                <p style="text-align: center; font-size: 17px;color: #252a68;font-weight: 500;">$150</p>
+                             </div>
+                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6">
+                                <p style="text-align: center; font-size: 17px;color: #aa1f2e;font-weight: 500;">$100</p>
+                             </div>
+                              </div>
+                           </p>
+                           <p class="card-text" style="margin-top: -12%;">
+                            <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"
+                                  style="margin-left: -3%;">
+                                 <div style="border:1px solid grey;width: 78px;height: 22px;border-radius: 50px;">
+                                    <img src="images\plus.png" width="10px" height="10px" style="float: left;margin-top: 8%;margin-left: 12%;" 
+                                    onclick="plus_function(1)">
+                                    <input type="text" readonly="readonly" value="0" name="" style="float: left; width: 50%; height: 70%; border:none;
+                                   margin-top: 3%;text-align: center;"id="1_product_quantity">
+                                  <img src="images\minus.png" width="10px" height="10px" 
+                                    style="float: left;margin-top: 8%;"
+                                    onclick="minus_function(1)">
+                                </div>
+                             </div>
+                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"
+                                  style="">
+                                <div style="border:1px solid grey;border-radius: 50px; background-color: #252a68;color: white;width: 99px;height: 21px;border-radius: 11px;"onclick="add_to_cart_function(1)"      id="product_1">
+                                   <img id="add_to_cart_bag" src="images\bag.png" width="12px" height="12px"style="float: left; margin-top: 2%;margin-left: 10%;">
+                                   <p style="float: left; font-size: 10px;margin-left: 5%;margin-top: 3%;line-height: 14px;font-weight: 500;">Add to Cart</p>
+                                </div>
+                             </div>
+                              </div>
+                                <div class="row">
+                                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+                                  <p style="color: #2b2d41;font-size: 9px; text-align: left;font-weight: 500;font-size: 9px;line-height: 12px;">
+                                    <strong style="color: #2b2d41">SKU: </strong><span style="color: grey">HFY-HFY-MJE</span></p>
+                                  </div>
+                              </div>
+                              <div class="row" style="margin-top: -6%;">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"
+                                  style="">
+                                   <p style="color: #2b2d41;font-size: 9px; text-align: left;font-weight: 500;font-size: 9px;line-height: 12px;">
+                                    <strong style="color: #2b2d41">Barcode </strong><span style="color: grey">1254654554</span></p>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"
+                                  style="">
+                                   <p style="color: #2b2d41;font-size: 9px; text-align: left;font-weight: 500;font-size: 9px;line-height: 12px;">
+                                    <strong style="color: #2b2d41">Expire: </strong><span style="color: grey">12-Dec-2020</span></p>
+                                </div>
+                              </div>
+                           </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+</div>
+
+  <!-- The Modal -->
+  <!-- style="display: none;" -->
+  <!-- id --><!-- myModal -->
+  <!-- class --><!-- modal -->
+  <div class="modal" id="myModal"  style="">
+    <div class="modal-dialog" style="width: 80%;">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <!-- <div class="modal-header"> -->
+          <!-- <h4 class="modal-title">Modal Heading</h4> -->
+
+         <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        <!-- </div> -->
+        
+        <!-- Modal body -->
+         <div class="modal-body" id= "modal-body" style="padding: 0px; margin: 0px;height: 468px;">
+           <button type="button" class="close" data-dismiss="modal" style="margin-right: 2%;">&times;</button>
+                <!-- <div class="fluid-container"> -->
+                  <!-- <div class="row"> -->
+<div>
+                     <!--  <div class="" style="background-color: white; float: left;width: 350px;height: 485px;padding: 20px;padding-left: 25px;">
+                      <img id="pop_up_image_1" src="images/Dog.png" width="300px" height="350px" style="padding: 0px;margin: 0px;background-color: white;">
+                      </div> -->
+                      <div class="img-zoom-container row" onmouseleave="checking('myresult');"onmouseenter="imageZoom('myimage', 'myresult');" style="float: left;width: 350px;height: 485px;padding: 20px;padding-left: 25px;">
+                      <img id="myimage" src="images/Dog.png"  width="300px" height="350px" style="padding: 0px;margin: 0px;background-color: white;">
+                      <!-- <div id="myresult" class="img-zoom-result" style="float: left;display: none;"></div> -->
+                    </div>
+                    <div class="" style="margin-left: 3%; float: left;margin-top: 1.4%;width: 400px;height: 600px;">
+                      <div id="myresult" class="img-zoom-result" style="float: left;display: none;position: absolute;z-index: 1;width: 400px;height: 400px;background-color: white;"></div>
+                      <p style="font-size: 16px;color: #88aa51;font-weight: 500;margin: 0px;padding: 0px;">NEW</p>
+                      <img src="images/star.png" width="20%" height="5%">
+                      <p id="pop_up_product_title" style="font-size: 35px;;color: #000000;font-weight: 600;margin-top: 0.5%;margin-left: -0.5%;">GRAIN-FREE</p>
+                      <p id="pop_up_product_category" style="font-size: 18px;;color: #000000;font-weight: 500;margin-top: -7%;">DOG FOOD</p>
+                      <div class="row" style="    margin-top: -1%;">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="font-size: 13px;color: #000000;font-weight: 600;">
+                          PRICE
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"style="font-size: 13px;color: #000000;font-weight: 600;">
+                          QUANTITY
+                        </div>   
+                      </div>
+                      <div class="row">
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="font-size: 35px;color: #88aa51;font-weight: 600;" id="per_product_price">
+                          $150
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"style="">
+                          <div style="border:1px solid grey;width: 78px;height: 22px;border-radius: 50px;margin-top: 8%;">
+                            <img src="images\plus.png" width="10px" height="10px" style="float: left;margin-top: 8%;margin-left: 12%;" 
+                              onclick="plus_function('pop_up')">
+                            <input type="text" readonly="readonly" value="0" name="" style="float: left; width: 50%; height: 70%; border:none;margin-top: 3%;text-align: center;"id="pop_up_product_quantity">
+                            <img src="images\minus.png" width="  10px" height="10px"style="float: left;margin-top: 8%;" onclick="minus_function('pop_up')">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" style="margin-top: 3%;">
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="font-size: 13px;color: black;font-weight: 600;">
+                          COLORS
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"style="">
+                        <p class="" style="">
+                              <button style="background-color: #d75a4a; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_color_dark_red"  onclick="product_color_function('pop_up',1,'dark_red');">
+                                  <span class="dot" style="display: none;" id="product_pop_up_dot_1"></span>
+                              </button>
+                              <button style="background-color: #252a68; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_color_dark_blue"  onclick="product_color_function('pop_up',2,'dark_blue');">
+                                  <span class="dot" style="display: none;" id="product_pop_up_dot_2"></span>
+                              </button>
+                              <button style="background-color: #d9b234; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_color_yellow"  onclick="product_color_function('pop_up',3,'yellow');">
+                                  <span class="dot" style="display: none;" id="product_pop_up_dot_3"></span>
+                              </button> 
+                              <button style="background-color: #e17725; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_color_orange"  onclick="product_color_function('pop_up',4,'orange');">
+                                  <span class="dot" style="display: none;" id="product_pop_up_dot_4"></span>
+                              </button>
+                              <button style="background-color: #d4d4d4; width: 20px; height: 20px; margin-right: 5%; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_color_grey"  onclick="product_color_function('pop_up',5,'grey');">
+                                  <span class="dot" style="display: none;" id="product_pop_up_dot_5"></span>
+                              </button>
+                           </p> 
+
+                        </div>
+
+                      </div>
+                        <div class="row" style="margin-top: -2%;">
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" style="font-size: 13px;color: black;font-weight: 600;">
+                          SIZE
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"style="">
+                         <p class="card-text" style="">
+                               <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_size_XS" onclick="product_size_function('pop_up','XS');"><b>XS</b></button>
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_size_S"  onclick="product_size_function('pop_up','S');"><b>S</b></button>
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_size_M"  onclick="product_size_function('pop_up','M');"><b>M</b></button> 
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_size_L"  onclick="product_size_function('pop_up','L');"><b>L</b></button>
+                              <button style="background-color: transparent; border:none; font-size: 12px;font-weight: 500" id="product_pop_up_size_XL"  onclick="product_size_function('pop_up','XL');"><b>XL</b></button>
+                           </p>
+                        </div>
+                       </div> 
+
+<section id="tabs">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <nav>
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">DESCRIPTION</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">ADDITIONAL INFORMATION</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">BRAND INFORMATION</a>
+            
+          </div>
+        </nav>
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 9;height: 142px;">
+            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+          
+          </div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+          </div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+          </div>
+          
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>   
+                    <div class="fluid-container">
+                  <div class="row">
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6">
+                          <p style="font-style: 20px;color: #000000;padding-top: 4%;">Total Price</p>
+                          <p id="total_price_pop_up" style="font-size: 30px;line-height: 19px;color: #252a68;font-weight: 500;">$150</p>
+                        </div>
+                        <div  onclick="quanity_going_in_cart('pop_up');">
+                          <div style="border:1px solid grey;border-radius: 50px; background-color: #252a68;color: white;width: 200px;height: 40px;border-radius: 100px;margin-top: 2%;"onclick="add_to_cart_function('pop_up')"id="product_pop_up">
+                        <img id="add_to_cart_bag" src="images\bag.png" width="20px" height="20px"style="float: left; margin-top: 4%;margin-left: 10%;">
+                        <p style="float: left; font-size: 20px;margin-left: 5%;margin-top: 5%;line-height: 14px;font-weight: 500;">Add to Cart</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+        
+        <!-- Modal 2nd Body -->
+        <div class="modal-body" id="modal-body" style=" height:70px; width: 350px;background-color: white;">
+          <div style="background-color: white;">
+            <div class="" style="background-color: white; float: left;"onclick="pop_up_image_change_function(2)";>
+             <img id="pop_up_image_2" src="images/cat.png" width="50px" height="50px" style="padding: 0px;margin: 0px; object-fit: scale-down;">
+            </div>
+             <div class="" style="background-color: white; float: left;" onclick="pop_up_image_change_function(3);">
+             <img id="pop_up_image_3" src="images/Dog.png" width="50px" height="50px" style="padding: 0px;margin: 0px; object-fit: scale-down;">
+            </div>
+          </div>
+
+        </div>
+        <!-- model 3rd Body -->
+        <div class="modal-body" id="modal-body" style="margin-top: -0.7%;height:50px; width: 350px;background-color: white;">
+          <div class="row">
+                                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+                                  <p style="color: #2b2d41;font-size: 9px; text-align: left;font-weight: 500;font-size: 9px;line-height: 12px;">
+                                    <strong style="color: #2b2d41">SKU: </strong><span style="color: grey">HFY-HFY-MJE</span></p>
+                                  </div>
+                              </div>
+                              <div class="row" style="margin-top: -6%;">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"
+                                  style="">
+                                   <p style="color: #2b2d41;font-size: 9px; text-align: left;font-weight: 500;font-size: 9px;line-height: 12px;">
+                                    <strong style="color: #2b2d41">Barcode </strong><span style="color: grey">1254654554</span></p>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6"
+                                  style="">
+                                   <p style="color: #2b2d41;font-size: 9px; text-align: left;font-weight: 500;font-size: 9px;line-height: 12px;">
+                                    <strong style="color: #2b2d41">Expire: </strong><span style="color: grey">12-Dec-2020</span></p>
+                                </div>
+                              </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

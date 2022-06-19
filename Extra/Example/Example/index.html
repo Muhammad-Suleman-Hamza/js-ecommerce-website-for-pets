@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Demo Example</title>
+        <script src="js/jquery-1.6.js"></script>
+        <script src="js/jquery.jqzoom-core.js"></script>
+        <link href="css/jquery.jqzoom.css" rel="stylesheet" />
+        
+    </head>
+    <body style="">
+        <div style="position:relative;top:100px;left:300px;width:600px;">
+        <a href="images/Dog.png" class="minipic"><img src="images/Dog.png"width="200px" height="200px"></a>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.minipic').jqzoom({
+                    zoomType: 'standard',
+                    lens: true,
+                    preloadImages: false,
+                    alwaysOn: false,
+                    zoomHeight: 400,
+                    zoomWidth:400
+                });
+
+            }); 
+        </script>
+        </div>
+    </body>
+</html>

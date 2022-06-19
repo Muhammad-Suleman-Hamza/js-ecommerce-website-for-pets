@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>White my Pet | Home</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/bootstrap-4-hover-navbar.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="js/niceCountryInput.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/niceCountryInput.css">
+
+        <!--Demo purpose css-->
+    </head>
+<style>
+.navbar {  
+    /*margin-top: 20px;*/
+}
+.split li{
+     /*float: left;*/
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+button:focus {
+    outline:0;
+}
+select:focus {
+    /*outline:none !important;*/
+    outline:0 !important;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+    <body>
+        <div class="fluid-container"> 
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 col-12">
+                    <img class="logo" src="images/Logo.png" width="129px" height="98px">
+                </div>
+                <div class="col-xl-5 col-lg-5 col-sm-12 col-xs-12 col-12" style="padding-top: 20px;">
+                    <div class="row justify-content-center">
+                        <form>
+                        <div class="form-group">
+                            <div style="float: left;">
+                                <input class="form-control" type="search" name="search_input" placeholder="Search Here" style="border-right: none !important;
+                                border-width: 1px;border-radius: 30px 0px 0px 30px; width: 17em;">
+                            </div>
+                           <div style="float: left;">
+                                <select class="form-control" style="border-width: 1px;border-radius: 0px 0px 0px 0px;box-shadow: none !important; width: 11em;">
+                                    <option>All Categories</option>
+                                    <option>New Arrivals</option>
+                                    <option>Sale</option>
+                                    <option>Ladies</option>
+                                    <option>Men</option>
+                                    <option>Clothing</option>
+                                    <option>Footwear</option>
+                                    <option>Accessories</option>
+                                </select>
+                           </div>
+                            <div style="float: left;">
+                                <button class="submit fa fa-search" 
+                                        style="height:38px; width: 40px; background-color: white; border-left:none; border-width: 1px;border-radius: 0px 30px 30px 0px;width: 3em;">
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="row justify-content-center">
+                        <ul style="margin-left: -35px;">
+                            <li style="display:inline;margin-right: 10px;"><a href="#" style="color: #aa1f2e">Food</a></li>
+                            <li style="display:inline;margin-left: 10px;margin-right: 10px;"><a href="#" style="color: #aa1f2e">Toy</a></li>
+                            <li style="display:inline;margin-left: 10px;margin-right: 10px"><a href="#" style="color: #aa1f2e">Grooming</a></li>
+                            <li style="display:inline;margin-left: 10px;"><a href="#" style="color: #aa1f2e">Health Care Supplies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-3 col-sm-12 col-xs-12 col-12">
+                   <div class="row justify-content-center" style="padding-top: 20px;">
+                       <div>
+                           <img src="images/user.png" width="35px" height="35px">
+                       </div>
+                       <div style="margin-left: 10px !important;margin-top: -2px !important;">
+                           <p style="margin: 0px !important;padding: 0px !important;">
+                              Hello!</p>
+                           <p style="margin: 0px !important;margin-top: -10px !important;padding: 0px !important;"><a href="" style="color: black; font-size: 14px;">My Account</a></p>
+                       </div>
+                       <div style="margin-left: 5px !important;">
+                           <img src="images/heart.png" width="27px" height="27px">
+                       </div>
+                       <div style="margin-left: 5px !important;">
+                           <img src="images/bag.png" width="25px" height="28px">
+                       </div>
+                   </div>
+                   <div class="row justify-content-center" style="z-index: 1">
+                    <p><a href="" style="color: #aa1f2e; font-size: 14px;">Become a Seller</a></p>
+                    <div class="niceCountryInputSelector" style="width: 200px;" 
+                         data-selectedcountry="sa" data-showspecial="false" data-showflags="true" data-i18nall="All selected"data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback" />
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="fluid-container">
+
+            <!-- Static navbar -->
+            <nav class="navbar navbar-expand-md navbar-light  btco-hover-menu "  
+                 style="background-color: #252a68 !important;">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <!-- dog -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dog
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Dog 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Dog 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Dog 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- cat -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Cat
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Cat 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Cat 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- Bird -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bird
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Bird 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Bird 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Bird 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- Small Pet -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Small Pet
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Small Pet 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Small Pet 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- Reptile -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Reptile
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Cat 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Reptile 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Reptile 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- Aquatic -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Aquatic
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Aquatic 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Aquatic 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- Horse -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Horse
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Horse 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Horse 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Horse 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- Farm Animal -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Farm Animal
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Farm Animal 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Farm Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <!-- Zoo Animal -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Zoo Animal
+                            </a>
+                            <ul class="dropdown-menu split" aria-labelledby="navbarDropdownMenuLink" style="width: max-content;">
+                                <div style="float: left;">
+                                    <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 3</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 4</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 5</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 6</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                                <div style="float: left;">
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 7</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 8</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 9</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 10</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 11</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Zoo Animal 12</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 5</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu Zoo Animal 6</a></li>
+                                    </ul>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main component for a primary marketing message or call to action -->
+            
+
+        </div> <!-- /container -->
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        <script src="js/bootstrap-4-hover-navbar.js"></script>
+            <script>
+        function onChangeCallback(ctr){
+            console.log("The country was changed: " + ctr);
+            //$("#selectionSpan").text(ctr);
+        }
+
+        $(document).ready(function () {
+            $(".niceCountryInputSelector").each(function(i,e){
+                new NiceCountryInput(e).init();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    </body>
+</html>
